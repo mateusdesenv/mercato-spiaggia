@@ -1,0 +1,71 @@
+import type { Product } from '../types/product'
+
+export const products: Product[] = [
+  {
+    id: '1',
+    name: 'Era dos Ventos Peverella',
+    producer: 'Caminhos de Pedra',
+    region: 'Serra Gaúcha, Brasil',
+    price: 189,
+    category: 'Vinho Branco',
+    rating: 4.9,
+    tags: ['Laranja', 'Ancestral'],
+  },
+  {
+    id: '2',
+    name: 'Guaspari Vale da Pedra',
+    producer: 'Espírito Sto. do Pinhal',
+    region: 'São Paulo, Brasil',
+    price: 245,
+    category: 'Vinho Tinto',
+    rating: 4.8,
+    tags: ['Syrah', 'Especiado'],
+  },
+  {
+    id: '3',
+    name: 'Vinha Solo Riesling',
+    producer: 'Serra Gaúcha',
+    region: 'Rio Grande do Sul, Brasil',
+    price: 128,
+    category: 'Vinho Branco',
+    rating: 4.7,
+    tags: ['Seco', 'Mineral'],
+  },
+  {
+    id: '4',
+    name: 'Cave Geisse Nature',
+    producer: 'Pinto Bandeira',
+    region: 'Rio Grande do Sul, Brasil',
+    price: 198,
+    category: 'Espumante',
+    rating: 4.9,
+    tags: ['Chardonnay', 'Pinot Noir'],
+  },
+  {
+    id: '5',
+    name: 'Pizzato Legno Chardonnay',
+    producer: 'Vale dos Vinhedos',
+    region: 'Rio Grande do Sul, Brasil',
+    price: 220,
+    category: 'Vinho Branco',
+    rating: 4.8,
+    tags: ['Barricado', 'Estruturado'],
+  },
+  {
+    id: '6',
+    name: 'Vinhas da Loucura Pet Nat',
+    producer: 'Vacaria',
+    region: 'Rio Grande do Sul, Brasil',
+    price: 142,
+    category: 'Espumante',
+    rating: 4.6,
+    tags: ['Natural', 'Vibrante'],
+  },
+]
+
+export const categories = [
+  { name: 'Vinhos', count: 120, href: '#vinhos' },
+  { name: 'Destilados', count: 45, href: '#destilados' },
+  { name: 'Carnes Nobres', count: 32, href: '#carnes' },
+  { name: 'Delicatessen', count: 68, href: '#delicatessen' },
+]
