@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import { SkipLink } from './components/SkipLink'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
@@ -7,10 +8,11 @@ import { Experience } from './components/Experience'
 import { About } from './components/About'
 import { Newsletter } from './components/Newsletter'
 import { Footer } from './components/Footer'
+import { ProductDetail } from './components/ProductDetail'
 
-function App() {
+function Home() {
   return (
-    <div className="min-h-screen bg-ink text-cream">
+    <>
       <SkipLink />
       <Header />
       <main id="conteudo-principal">
@@ -22,6 +24,17 @@ function App() {
         <Newsletter />
       </main>
       <Footer />
+    </>
+  )
+}
+
+function App() {
+  return (
+    <div className="min-h-screen bg-ink text-cream">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/produto/:id" element={<ProductDetail />} />
+      </Routes>
     </div>
   )
 }

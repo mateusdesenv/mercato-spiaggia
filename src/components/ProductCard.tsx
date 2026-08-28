@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Product } from '../types/product'
 
 interface ProductCardProps {
@@ -11,7 +12,10 @@ export function ProductCard({ product }: ProductCardProps) {
   }).format(product.price)
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface-elevated transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-wine/10">
+    <Link
+      to={`/produto/${product.id}`}
+      className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface-elevated transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-wine/10"
+    >
       <div className="relative aspect-[4/5] overflow-hidden bg-ink">
         {product.image ? (
           <img
@@ -65,6 +69,6 @@ export function ProductCard({ product }: ProductCardProps) {
           </button>
         </div>
       </div>
-    </article>
+    </Link>
   )
 }

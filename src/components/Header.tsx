@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const navItems = [
   { label: 'Coleções', href: '#colecoes' },
@@ -9,6 +10,8 @@ const navItems = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
   useEffect(() => {
     if (menuOpen) {
@@ -33,22 +36,22 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-ink/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
-        <a href="#" className="flex items-center gap-3" aria-label="Mercato Spiaggia - Início">
+        <Link to="/" className="flex items-center gap-3" aria-label="Mercato Spiaggia - Início">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-gold to-copper text-ink">
             <span className="font-serif text-lg font-semibold">M</span>
           </div>
           <span className="font-serif text-xl font-medium tracking-wide text-cream">Mercato Spiaggia</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={isHome ? item.href : `/${item.href}`}
               className="text-sm font-medium text-stone transition-colors hover:text-gold"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -93,22 +96,22 @@ export function Header() {
         >
           <nav className="flex flex-col gap-4" aria-label="Navegação mobile">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={isHome ? item.href : `/${item.href}`}
                 className="text-base font-medium text-cream transition-colors hover:text-gold"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contato"
+            <Link
+              to={isHome ? '#contato' : '/#contato'}
               className="mt-2 rounded-full bg-gold px-5 py-3 text-center text-sm font-semibold text-ink"
               onClick={() => setMenuOpen(false)}
             >
               Reservar Mesa
-            </a>
+            </Link>
           </nav>
         </div>
       )}
