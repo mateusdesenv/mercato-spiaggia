@@ -7,4 +7,5 @@ export interface Product {
   category: 'Vinho Tinto' | 'Vinho Branco' | 'Espumante' | 'Destilado'
   rating: number
   tags: string[]
+  image?: string
 }

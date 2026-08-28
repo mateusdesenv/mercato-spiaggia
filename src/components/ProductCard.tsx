@@ -12,10 +12,20 @@ export function ProductCard({ product }: ProductCardProps) {
 
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl bg-surface-elevated transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-wine/10">
-      <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-wine-deep to-ink p-8">
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
-          <h3 className="font-serif text-2xl font-medium text-cream">{product.name}</h3>
+      <div className="relative aspect-[4/5] overflow-hidden bg-ink">
+        {product.image ? (
+          <img
+            src={product.image}
+            alt={`Garrafa de ${product.name}`}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        ) : (
+          <div className="h-full w-full bg-gradient-to-br from-wine-deep to-ink" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 z-10 p-6">
+          <h3 className="font-serif text-xl font-medium leading-tight text-cream">{product.name}</h3>
           <p className="mt-1 text-sm text-gold">{product.producer}</p>
         </div>
         <div className="absolute right-4 top-4 rounded-full bg-ink/60 px-2.5 py-1 text-xs font-medium text-gold backdrop-blur-sm">
