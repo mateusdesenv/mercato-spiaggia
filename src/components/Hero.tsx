@@ -1,13 +1,13 @@
 export function Hero() {
   return (
     <section
-      className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden pt-16"
+      className="relative flex min-h-[100dvh] items-center justify-center overflow-hidden pt-20"
       aria-label="Apresentação principal"
     >
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2100&auto=format&fit=crop"
-          alt=""
+          src="/images/hero/adega-vintage-pauillac-30557568.jpg"
+          alt="Adega vintage com garrafas de vinho em prateleiras"
           className="h-full w-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/40 to-ink" />

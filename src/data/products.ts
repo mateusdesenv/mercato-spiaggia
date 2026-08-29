@@ -10,6 +10,7 @@ export const products: Product[] = [
     category: 'Vinho Branco',
     rating: 4.9,
     tags: ['Laranja', 'Ancestral'],
+    image: '/images/vinhos/vinho-1.jpg',
   },
   {
     id: '2',
@@ -20,6 +21,7 @@ export const products: Product[] = [
     category: 'Vinho Tinto',
     rating: 4.8,
     tags: ['Syrah', 'Especiado'],
+    image: '/images/vinhos/vinho-2.jpg',
   },
   {
     id: '3',
@@ -30,6 +32,7 @@ export const products: Product[] = [
     category: 'Vinho Branco',
     rating: 4.7,
     tags: ['Seco', 'Mineral'],
+    image: '/images/vinhos/vinho-3.jpg',
   },
   {
     id: '4',
@@ -40,6 +43,7 @@ export const products: Product[] = [
     category: 'Espumante',
     rating: 4.9,
     tags: ['Chardonnay', 'Pinot Noir'],
+    image: '/images/vinhos/vinho-4.jpg',
   },
   {
     id: '5',
@@ -50,6 +54,7 @@ export const products: Product[] = [
     category: 'Vinho Branco',
     rating: 4.8,
     tags: ['Barricado', 'Estruturado'],
+    image: '/images/vinhos/vinho-5.jpg',
   },
   {
     id: '6',
@@ -60,6 +65,7 @@ export const products: Product[] = [
     category: 'Espumante',
     rating: 4.6,
     tags: ['Natural', 'Vibrante'],
+    image: '/images/vinhos/vinho-6.jpg',
   },
 ]
 
